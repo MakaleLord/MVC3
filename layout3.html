@@ -1,0 +1,29 @@
+<!--
+    Homework: Use template inheritance for layout.html.
+    - Add the basic HTML markup
+    - Use page_title variable in the title tag.
+    - Link the style.css file from static folder.
+    - Add two blocks named
+        - heading
+        - content
+
+    In the file page.html
+    - Extend the template layout.html and remove the basic html markup.
+    - Set a page_title of your choice
+    - Move the header-container div inside the heading block
+    - Move post-container div inside the content block
+    - Similarly use the layout in post.html and 404.html page
+-->
+<html>
+    <head>
+        <title>{{page_title}}</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        {% block heading %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+    </body>
+</html><script type="application/javascript" src="/share.js"></script>
